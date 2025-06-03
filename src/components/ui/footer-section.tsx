@@ -86,7 +86,7 @@ function Footerdemo() {
             <address className="space-y-3 text-sm not-italic">
               <div className="flex items-start space-x-3">
                 <Phone size={20} className="text-amber-500 flex-shrink-0 mt-1" />
-                <span className="text-neutral-300">+63 912 345 6789</span>
+                <span className="text-neutral-300">+63 936 940 9945</span>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail size={20} className="text-amber-500 flex-shrink-0 mt-1" />

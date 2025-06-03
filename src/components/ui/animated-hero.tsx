@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -64,11 +64,6 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 mt-6">
-            <Button asChild size="lg" className="gap-4 bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900">
-              <Link to="tel:+639123456789">
-                <PhoneCall className="w-4 h-4 mr-2" /> Call Us Now
-              </Link>
-            </Button>
             <Button asChild size="lg" className="gap-4 bg-amber-700 hover:bg-amber-800 text-white">
               <Link to="/contact">
                 Get a Free Quote <MoveRight className="w-4 h-4" />
