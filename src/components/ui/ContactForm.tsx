@@ -42,6 +42,25 @@ const ContactForm: React.FC = () => {
         throw new Error(supabaseError.message || 'Error submitting form to database');
       }
       
+      // Also send the data to Make.com webhook
+      const webhookUrl = 'https://hook.us1.make.com/oni5yts3e9zxxmxpqtgs9swfts4k98qd';
+      
+      const makeResponse = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          submitted_at: new Date().toISOString()
+        }),
+      });
+      
+      if (!makeResponse.ok) {
+        console.error('Webhook error:', await makeResponse.text());
+        throw new Error('Error sending data to webhook');
+      }
+      
       // Success
       setIsSubmitted(true);
       
