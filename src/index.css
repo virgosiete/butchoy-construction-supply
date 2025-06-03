@@ -213,7 +213,7 @@
 
   /* Testimonial image container */
   .testimonial-img-container {
-    @apply w-16 h-16 rounded-full overflow-hidden mb-4 mx-auto;
+    @apply w-20 h-20 rounded-full overflow-hidden mb-4 mx-auto;
   }
   
   .testimonial-img-container img {

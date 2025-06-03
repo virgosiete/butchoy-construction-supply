@@ -19,7 +19,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXXP7SlfH8foBa6ViRO1jH3SZ7uYzwIALrElFD"
   },
   {
     id: "base-course",
@@ -29,7 +29,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/4604796/pexels-photo-4604796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXk2tYcY3OV3iUu8BEIYpkMTAeblCSXyFx40HL"
   },
   {
     id: "premium-base-course",

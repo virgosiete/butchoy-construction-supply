@@ -17,7 +17,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
         />
       </div>
       
-      <div className="flex items-center mb-4">
+      <div className="flex items-center mb-4 justify-center">
         {[...Array(5)].map((_, i) => (
           <Star
             key={i}
@@ -29,7 +29,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
       
       <p className="text-neutral-600 mb-6 flex-grow italic text-center">"{testimonial.content}"</p>
       
-      <div className="mt-auto text-center">
+      <div className="mt-auto text-center w-full">
         <p className="font-semibold">{testimonial.name}</p>
         <p className="text-sm text-neutral-500">{testimonial.role}</p>
       </div>

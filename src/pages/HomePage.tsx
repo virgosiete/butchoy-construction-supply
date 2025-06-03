@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="responsive-grid mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12 max-w-5xl mx-auto">
             {testimonials.map(testimonial => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
