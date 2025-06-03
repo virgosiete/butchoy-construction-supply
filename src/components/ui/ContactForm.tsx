@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../../lib/supabase';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,30 +10,55 @@ const ContactForm: React.FC = () => {
     message: ''
   });
   
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState('');
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log(formData);
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+    setError('');
     
-    // Reset form after submission
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        phone: '',
-        location: '',
-        product: '',
-        message: ''
-      });
-      setIsSubmitted(false);
-    }, 5000);
+    try {
+      // Insert the form data into Supabase
+      const { error: supabaseError } = await supabase
+        .from('inquiries')
+        .insert([
+          {
+            name: formData.name,
+            phone: formData.phone,
+            location: formData.location,
+            product: formData.product,
+            message: formData.message
+          }
+        ]);
+        
+      if (supabaseError) throw supabaseError;
+      
+      setIsSubmitted(true);
+      
+      // Reset form after submission
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          phone: '',
+          location: '',
+          product: '',
+          message: ''
+        });
+      }, 5000);
+      
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError('Failed to submit your inquiry. Please try again later or contact us directly by phone.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -51,6 +77,12 @@ const ContactForm: React.FC = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {error && (
+            <div className="bg-red-100 text-red-800 p-4 rounded-md mb-4">
+              {error}
+            </div>
+          )}
+          
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
               Full Name *
@@ -64,6 +96,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="input-field"
               placeholder="Enter your full name"
+              disabled={isSubmitting}
             />
           </div>
           
@@ -80,6 +113,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="input-field"
               placeholder="Enter your phone number"
+              disabled={isSubmitting}
             />
           </div>
           
@@ -96,6 +130,7 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="input-field"
               placeholder="Enter your location"
+              disabled={isSubmitting}
             />
           </div>
           
@@ -110,6 +145,7 @@ const ContactForm: React.FC = () => {
               value={formData.product}
               onChange={handleChange}
               className="input-field"
+              disabled={isSubmitting}
             >
               <option value="">Select a product</option>
               <option value="s1-washed-sand">S-1 Washed Sand</option>
@@ -137,11 +173,16 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="input-field"
               placeholder="Enter any specific requirements or questions"
+              disabled={isSubmitting}
             ></textarea>
           </div>
           
-          <button type="submit" className="btn-primary w-full">
-            Submit Inquiry
+          <button 
+            type="submit" 
+            className="btn-primary w-full"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
           </button>
           
           <p className="text-sm text-neutral-500 mt-2">
