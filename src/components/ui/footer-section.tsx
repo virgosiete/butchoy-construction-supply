@@ -39,24 +39,9 @@ function Footerdemo() {
               />
               <h3 className="text-xl font-bold text-white">Butchoy Construction & Supply</h3>
             </div>
-            <p className="mb-6 text-neutral-300">
+            <p className="text-neutral-300">
               Your trusted partner in construction supplies. Providing quality materials for builders and contractors since 2010.
             </p>
-            <form className="relative">
-              <Input
-                type="email"
-                placeholder="Enter your email for updates"
-                className="pr-12 backdrop-blur-sm bg-black text-white border-charcoal-600"
-              />
-              <Button
-                type="submit"
-                size="icon"
-                className="absolute right-1 top-1 h-8 w-8 rounded-full bg-amber-700 text-white transition-transform hover:scale-105"
-              >
-                <Send className="h-4 w-4" />
-                <span className="sr-only">Subscribe</span>
-              </Button>
-            </form>
             <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-amber-700/10 blur-2xl" />
           </div>
           
