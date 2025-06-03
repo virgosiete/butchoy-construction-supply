@@ -8,7 +8,8 @@ export const products: Product[] = [
     icon: "circle",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/6312362/pexels-photo-6312362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "three-fourth",
@@ -17,7 +18,8 @@ export const products: Product[] = [
     icon: "disc",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "base-course",
@@ -26,7 +28,8 @@ export const products: Product[] = [
     icon: "layers",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/4604796/pexels-photo-4604796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "premium-base-course",
@@ -35,7 +38,8 @@ export const products: Product[] = [
     icon: "layers-3",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/13007818/pexels-photo-13007818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "vibro",
@@ -44,7 +48,8 @@ export const products: Product[] = [
     icon: "wave",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/4427532/pexels-photo-4427532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "double-screen-sand",
@@ -53,7 +58,8 @@ export const products: Product[] = [
     icon: "gauge",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/6460448/pexels-photo-6460448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "g1",
@@ -62,7 +68,8 @@ export const products: Product[] = [
     icon: "circle-dot",
     price: "Contact for pricing",
     minOrder: "1 truck",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/6957347/pexels-photo-6957347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "hollow-blocks",
@@ -71,7 +78,8 @@ export const products: Product[] = [
     icon: "square",
     price: "Contact for pricing",
     minOrder: "100 pieces",
-    deliveryTime: "1-2 days"
+    deliveryTime: "1-2 days",
+    image: "https://images.pexels.com/photos/6598699/pexels-photo-6598699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "cement",
@@ -80,7 +88,8 @@ export const products: Product[] = [
     icon: "package",
     price: "Contact for pricing",
     minOrder: "10 bags",
-    deliveryTime: "Same day to 24 hours"
+    deliveryTime: "Same day to 24 hours",
+    image: "https://images.pexels.com/photos/6598714/pexels-photo-6598714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   },
   {
     id: "boulders",
@@ -89,6 +98,7 @@ export const products: Product[] = [
     icon: "globe",
     price: "Contact for pricing",
     minOrder: "Varies",
-    deliveryTime: "1-2 days"
+    deliveryTime: "1-2 days",
+    image: "https://images.pexels.com/photos/7659583/pexels-photo-7659583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   }
 ];

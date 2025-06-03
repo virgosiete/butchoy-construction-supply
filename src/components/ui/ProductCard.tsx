@@ -15,9 +15,19 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) 
   return (
     <div className={`card group ${featured ? 'h-full' : ''}`}>
       <div className="flex flex-col h-full">
-        <div className={`mb-4 ${featured ? 'p-4 bg-amber-100 rounded-full inline-block aspect-square' : ''}`}>
-          <IconComponent size={featured ? 32 : 24} className="text-amber-700" />
-        </div>
+        {featured && product.image ? (
+          <div className="mb-4 rounded-full overflow-hidden w-full aspect-square">
+            <img 
+              src={product.image} 
+              alt={product.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ) : (
+          <div className={`mb-4 ${featured ? 'p-4 bg-amber-100 rounded-full inline-block aspect-square' : ''}`}>
+            <IconComponent size={featured ? 32 : 24} className="text-amber-700" />
+          </div>
+        )}
         
         <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
         <p className="text-neutral-600 mb-4 flex-grow">{product.description}</p>

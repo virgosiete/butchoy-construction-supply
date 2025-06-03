@@ -6,6 +6,7 @@ export interface Product {
   price?: string;
   minOrder?: string;
   deliveryTime?: string;
+  image?: string;
 }
 
 export interface Testimonial {
