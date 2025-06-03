@@ -80,17 +80,13 @@ const HomePage: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Service Areas</h2>
             <p className="text-xl mb-8">
-              We serve Lucena City and surrounding areas in Quezon Province. Let us know your location for a fast delivery estimate.
+              We deliver across Southern Luzon. Contact us for delivery estimates to your location.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Lucena City</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Tayabas</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Pagbilao</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Sariaya</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Candelaria</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Atimonan</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Mauban</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">San Antonio</div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">CALABARZON (Region IV-A)</div>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">MIMAROPA (Region IV-B)</div>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Bicol Region (Region V)</div>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4 col-span-full sm:col-span-3">And Other Surrounding Areas</div>
             </div>
           </div>
         </div>

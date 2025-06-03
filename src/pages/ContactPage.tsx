@@ -81,18 +81,16 @@ const ContactPage: React.FC = () => {
               <div className="bg-white rounded-lg shadow-md p-6">
                 <h3 className="text-xl font-semibold mb-4">Delivery Areas</h3>
                 <p className="text-neutral-600 mb-4">
-                  We deliver to the following areas in Quezon Province:
+                  We deliver to the following regions:
                 </p>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-neutral-100 rounded p-2 text-center">Lucena City</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Tayabas</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Pagbilao</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Sariaya</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Candelaria</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Atimonan</div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="bg-neutral-100 rounded p-2 text-center">CALABARZON (Region IV-A)</div>
+                  <div className="bg-neutral-100 rounded p-2 text-center">MIMAROPA (Region IV-B)</div>
+                  <div className="bg-neutral-100 rounded p-2 text-center">Bicol Region (Region V)</div>
+                  <div className="bg-neutral-100 rounded p-2 text-center">Other areas (by arrangement)</div>
                 </div>
                 <p className="text-neutral-600 mt-4">
-                  For other areas, please contact us for availability and delivery rates.
+                  For specific location inquiries, please contact us for availability and delivery rates.
                 </p>
               </div>
             </div>
