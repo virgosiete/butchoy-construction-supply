@@ -8,8 +8,8 @@ const AboutPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 bg-about-pattern bg-cover bg-center aspect-mobile md:aspect-desktop">
         <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
-        <div className="container-custom relative z-10 text-white">
-          <div className="max-w-3xl">
+        <div className="container-custom relative z-10 text-white flex items-center justify-center h-full">
+          <div className="max-w-3xl text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">About Us</h1>
             <p className="text-xl text-neutral-200">
               Learn about our journey in becoming one of the trusted construction material suppliers in Lucena City.
@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
       <section className="section bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center lg:text-left">
               <h2 className="section-title">Our Story</h2>
               <p className="mb-4 text-neutral-600">
                 Butchoy Construction & Supply was established in 2010 with a simple mission: to provide quality construction materials at affordable prices with reliable delivery service.
@@ -34,12 +34,14 @@ const AboutPage: React.FC = () => {
                 Our founder, Butchoy Gomez, built this business on the principles of honesty, reliability, and customer satisfaction. Today, we continue to uphold these values as we serve our growing number of clients.
               </p>
             </div>
-            <div className="img-container aspect-square md:aspect-desktop rounded-lg overflow-hidden shadow-md">
-              <img 
-                src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ" 
-                alt="Construction materials yard" 
-                className="w-full h-full object-cover"
-              />
+            <div className="flex justify-center">
+              <div className="img-container aspect-square md:aspect-desktop rounded-lg overflow-hidden shadow-md max-w-md mx-auto w-full">
+                <img 
+                  src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ" 
+                  alt="Construction materials yard" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

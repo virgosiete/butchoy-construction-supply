@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
           <span className={`font-bold text-lg md:text-xl ${
             isScrolled || location.pathname !== '/' ? 'text-neutral-900' : 'text-white'
           }`}>
-            Butchoy Construction
+            Butchoy Construction & Supply
           </span>
         </Link>
         
