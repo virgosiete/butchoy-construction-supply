@@ -136,9 +136,9 @@ const AboutPage: React.FC = () => {
                 />
               </div>
               <h3 className="text-xl font-semibold">Martina Querubin</h3>
-              <p className="text-amber-700 mb-2">Operations Manager</p>
+              <p className="text-amber-700 mb-2">Chief Financial Officer</p>
               <p className="text-neutral-600">
-                Martina ensures that all deliveries are made on time and that our inventory is always well-stocked to meet customer demands.
+                Martina oversees all financial operations, strategic planning, and resource allocation. Her expertise in financial management ensures the company's fiscal health and sustainable growth while maintaining competitive pricing for our customers.
               </p>
             </div>
             
@@ -150,10 +150,10 @@ const AboutPage: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold">Elena Reyes</h3>
-              <p className="text-amber-700 mb-2">Customer Relations</p>
+              <h3 className="text-xl font-semibold">Patrick Gomez</h3>
+              <p className="text-amber-700 mb-2">Chief Operating Officer</p>
               <p className="text-neutral-600">
-                Elena is dedicated to ensuring all our clients receive excellent service and their needs are met promptly and efficiently.
+                Patrick directs all operational functions including supply chain management, logistics, and quality control. His strategic vision drives our operational excellence, ensuring timely deliveries and maintaining the highest standards for all our products.
               </p>
             </div>
           </div>
