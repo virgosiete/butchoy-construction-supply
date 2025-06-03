@@ -77,17 +77,51 @@ const HomePage: React.FC = () => {
       {/* Service Area Section */}
       <section className="section bg-amber-700 text-white">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Service Areas</h2>
             <p className="text-xl mb-8">
               We deliver across Southern Luzon. Contact us for delivery estimates to your location.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">CALABARZON (Region IV-A)</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">MIMAROPA (Region IV-B)</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4">Bicol Region (Region V)</div>
-              <div className="bg-amber-800 bg-opacity-50 rounded-lg py-3 px-4 col-span-full sm:col-span-3">And Other Surrounding Areas</div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">CALABARZON (Region IV-A)</h3>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Cavite</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Laguna</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Batangas</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Rizal</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2 col-span-2">Quezon</div>
+                </div>
+              </div>
+              
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">MIMAROPA (Region IV-B)</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Occidental Mindoro</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Oriental Mindoro</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Marinduque</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Romblon</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2 col-span-1 sm:col-span-2">Palawan</div>
+                </div>
+              </div>
+              
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">Bicol Region (Region V)</h3>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Albay</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Camarines Norte</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Camarines Sur</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Catanduanes</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Masbate</div>
+                  <div className="bg-amber-700 bg-opacity-40 rounded p-2">Sorsogon</div>
+                </div>
+              </div>
             </div>
+            
+            <p className="text-lg mt-6">
+              Additional areas may be served upon request. Contact us for delivery options to your specific location.
+            </p>
           </div>
         </div>
       </section>

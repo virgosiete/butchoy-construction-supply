@@ -83,14 +83,45 @@ const ContactPage: React.FC = () => {
                 <p className="text-neutral-600 mb-4">
                   We deliver to the following regions:
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  <div className="bg-neutral-100 rounded p-2 text-center">CALABARZON (Region IV-A)</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">MIMAROPA (Region IV-B)</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Bicol Region (Region V)</div>
-                  <div className="bg-neutral-100 rounded p-2 text-center">Other areas (by arrangement)</div>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-medium mb-2 text-amber-700">CALABARZON (Region IV-A)</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Cavite</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Laguna</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Batangas</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Rizal</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Quezon</div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-medium mb-2 text-amber-700">MIMAROPA (Region IV-B)</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Occidental Mindoro</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Oriental Mindoro</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Marinduque</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Romblon</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Palawan</div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-medium mb-2 text-amber-700">Bicol Region (Region V)</h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Albay</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Camarines Norte</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Camarines Sur</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Catanduanes</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Masbate</div>
+                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Sorsogon</div>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-neutral-600 mt-4">
-                  For specific location inquiries, please contact us for availability and delivery rates.
+                
+                <p className="text-neutral-600 mt-6">
+                  For specific location inquiries or other areas beyond these regions, please contact us for availability and delivery rates.
                 </p>
               </div>
             </div>
