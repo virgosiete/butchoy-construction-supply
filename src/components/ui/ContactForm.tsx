@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { supabase } from '../../lib/supabase';
+import { supabase, type Inquiry } from '../../lib/supabase';
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Inquiry>({
     name: '',
     phone: '',
     location: '',
@@ -12,7 +12,7 @@ const ContactForm: React.FC = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string | null>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -21,25 +21,25 @@ const ContactForm: React.FC = () => {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Clear previous states
+    setError(null);
     setIsSubmitting(true);
-    setError('');
     
     try {
-      // Insert the form data into Supabase
-      const { error: supabaseError } = await supabase
-        .from('inquiries')
-        .insert([
-          {
-            name: formData.name,
-            phone: formData.phone,
-            location: formData.location,
-            product: formData.product,
-            message: formData.message
-          }
-        ]);
-        
-      if (supabaseError) throw supabaseError;
+      // Check if Supabase URL is configured
+      if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+        throw new Error('Supabase not configured. Please set up your environment variables.');
+      }
       
+      // Submit the data to Supabase
+      const { error } = await supabase
+        .from('inquiries')
+        .insert([formData]);
+      
+      if (error) throw error;
+      
+      // Success
       setIsSubmitted(true);
       
       // Reset form after submission
@@ -51,11 +51,12 @@ const ContactForm: React.FC = () => {
           product: '',
           message: ''
         });
+        setIsSubmitted(false);
       }, 5000);
       
     } catch (err) {
       console.error('Error submitting form:', err);
-      setError('Failed to submit your inquiry. Please try again later or contact us directly by phone.');
+      setError(err instanceof Error ? err.message : 'An error occurred while submitting the form');
     } finally {
       setIsSubmitting(false);
     }
@@ -76,119 +77,116 @@ const ContactForm: React.FC = () => {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <>
           {error && (
             <div className="bg-red-100 text-red-800 p-4 rounded-md mb-4">
               {error}
             </div>
           )}
           
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
-              Full Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              className="input-field"
-              placeholder="Enter your full name"
-              disabled={isSubmitting}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">
-              Phone Number *
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              value={formData.phone}
-              onChange={handleChange}
-              className="input-field"
-              placeholder="Enter your phone number"
-              disabled={isSubmitting}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="location" className="block text-sm font-medium text-neutral-700 mb-1">
-              Location (Barangay or City) *
-            </label>
-            <input
-              type="text"
-              id="location"
-              name="location"
-              required
-              value={formData.location}
-              onChange={handleChange}
-              className="input-field"
-              placeholder="Enter your location"
-              disabled={isSubmitting}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="product" className="block text-sm font-medium text-neutral-700 mb-1">
-              Product Interested In *
-            </label>
-            <select
-              id="product"
-              name="product"
-              required
-              value={formData.product}
-              onChange={handleChange}
-              className="input-field"
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
+                Full Name *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+                className="input-field"
+                placeholder="Enter your full name"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+                className="input-field"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="location" className="block text-sm font-medium text-neutral-700 mb-1">
+                Location (Barangay or City) *
+              </label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                required
+                value={formData.location}
+                onChange={handleChange}
+                className="input-field"
+                placeholder="Enter your location"
+              />
+            </div>
+            
+            <div>
+              <label htmlFor="product" className="block text-sm font-medium text-neutral-700 mb-1">
+                Product Interested In *
+              </label>
+              <select
+                id="product"
+                name="product"
+                required
+                value={formData.product}
+                onChange={handleChange}
+                className="input-field"
+              >
+                <option value="">Select a product</option>
+                <option value="s1-washed-sand">S-1 Washed Sand</option>
+                <option value="three-fourth">3/4</option>
+                <option value="base-course">Base Course</option>
+                <option value="premium-base-course">Premium Base Course</option>
+                <option value="vibro">Vibro</option>
+                <option value="double-screen-sand">Double Screen Sand</option>
+                <option value="g1">G-1</option>
+                <option value="hollow-blocks">Hollow Blocks</option>
+                <option value="cement">Cement</option>
+                <option value="boulders">Boulders</option>
+              </select>
+            </div>
+            
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
+                Additional Notes
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                value={formData.message}
+                onChange={handleChange}
+                className="input-field"
+                placeholder="Enter any specific requirements or questions"
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              className="btn-primary w-full"
               disabled={isSubmitting}
             >
-              <option value="">Select a product</option>
-              <option value="s1-washed-sand">S-1 Washed Sand</option>
-              <option value="three-fourth">3/4</option>
-              <option value="base-course">Base Course</option>
-              <option value="premium-base-course">Premium Base Course</option>
-              <option value="vibro">Vibro</option>
-              <option value="double-screen-sand">Double Screen Sand</option>
-              <option value="g1">G-1</option>
-              <option value="hollow-blocks">Hollow Blocks</option>
-              <option value="cement">Cement</option>
-              <option value="boulders">Boulders</option>
-            </select>
-          </div>
-          
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
-              Additional Notes
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              className="input-field"
-              placeholder="Enter any specific requirements or questions"
-              disabled={isSubmitting}
-            ></textarea>
-          </div>
-          
-          <button 
-            type="submit" 
-            className="btn-primary w-full"
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
-          </button>
-          
-          <p className="text-sm text-neutral-500 mt-2">
-            * Required fields
-          </p>
-        </form>
+              {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
+            </button>
+            
+            <p className="text-sm text-neutral-500 mt-2">
+              * Required fields
+            </p>
+          </form>
+        </>
       )}
     </div>
   );
