@@ -219,4 +219,15 @@
   .testimonial-img-container img {
     @apply w-full h-full object-cover;
   }
+
+  /* Featured product image container */
+  .featured-product-image {
+    @apply rounded-full overflow-hidden mx-auto flex-shrink-0;
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  .featured-product-image img {
+    @apply w-full h-full object-cover;
+  }
 }

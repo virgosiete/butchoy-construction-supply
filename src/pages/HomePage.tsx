@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="responsive-grid mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
             {featuredProducts.map(product => (
               <ProductCard key={product.id} product={product} featured={true} />
             ))}
