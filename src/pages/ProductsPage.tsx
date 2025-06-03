@@ -71,7 +71,7 @@ const ProductsPage: React.FC = () => {
                 <span className="text-neutral-500">{filteredProducts.length} items</span>
               </div>
               
-              <div className="responsive-grid">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredProducts.map(product => (
                   <ProductCard key={product.id} product={product} />
                 ))}

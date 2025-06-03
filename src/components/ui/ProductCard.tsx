@@ -15,8 +15,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) 
   return (
     <div className={`card group ${featured ? 'h-full' : ''}`}>
       <div className="flex flex-col h-full items-center">
-        {featured && product.image ? (
-          <div className="mb-6 rounded-full overflow-hidden w-48 h-48 mx-auto flex-shrink-0">
+        {product.image ? (
+          <div className={`mb-4 overflow-hidden ${featured ? 'w-48 h-48 rounded-full' : 'w-24 h-24 rounded-full'} mx-auto flex-shrink-0`}>
             <img 
               src={product.image} 
               alt={product.name}

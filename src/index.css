@@ -230,4 +230,15 @@
   .featured-product-image img {
     @apply w-full h-full object-cover;
   }
+
+  /* Product list item image */
+  .product-list-image {
+    @apply rounded-full overflow-hidden mx-auto flex-shrink-0;
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .product-list-image img {
+    @apply w-full h-full object-cover;
+  }
 }
