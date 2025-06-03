@@ -62,7 +62,7 @@ export default {
       backgroundImage: {
         'hero-pattern': "url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg')",
         'about-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ')",
-        'products-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXudLtQFpEdsjQ95fFPgphuvW04ZnMwOSKUk8N')",
+        'products-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ')",
       },
     },
   },
