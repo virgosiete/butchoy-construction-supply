@@ -37,7 +37,7 @@ const AboutPage: React.FC = () => {
             <div className="flex justify-center">
               <div className="img-container aspect-square md:aspect-desktop rounded-lg overflow-hidden shadow-md max-w-md mx-auto w-full">
                 <img 
-                  src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ" 
+                  src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXDup7EG6w2cZtiuMQxgLAeslWbDaXBj8NVKmv" 
                   alt="Construction materials yard" 
                   className="w-full h-full object-cover"
                 />

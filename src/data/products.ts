@@ -39,7 +39,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/13007818/pexels-photo-13007818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXug2HfHpEdsjQ95fFPgphuvW04ZnMwOSKUk8N"
   },
   {
     id: "vibro",
@@ -49,7 +49,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/4427532/pexels-photo-4427532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXPoBnXWNkB8DhAUlRMWqSbJYs2vT6pe5Ijc0w"
   },
   {
     id: "double-screen-sand",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/6460448/pexels-photo-6460448.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXwV6TFXDEUCaLI7Ge9Hjl3nmsX5kRS8VNTqZv"
   },
   {
     id: "g1",
@@ -69,7 +69,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/6957347/pexels-photo-6957347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXMZhrhuJ2mMfXlHg91rK4jFwaoY8UkINeDOnE"
   },
   {
     id: "hollow-blocks",
@@ -79,7 +79,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "100 pieces",
     deliveryTime: "1-2 days",
-    image: "https://images.pexels.com/photos/6598699/pexels-photo-6598699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXWauavvQxCyLAaJU0P9bz67Xdcrf5tmwuTiGv"
   },
   {
     id: "cement",
@@ -89,7 +89,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "10 bags",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/6598714/pexels-photo-6598714.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXyqyj0inl0apcJWFTuqBm8PNKwLsdDRYMe3x6"
   },
   {
     id: "boulders",
@@ -99,6 +99,6 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "Varies",
     deliveryTime: "1-2 days",
-    image: "https://images.pexels.com/photos/7659583/pexels-photo-7659583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXjKckFqzWTC4ymsE3gHckYbxohIDt7aMSpwnf"
   }
 ];
