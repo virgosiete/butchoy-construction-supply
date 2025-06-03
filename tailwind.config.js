@@ -63,6 +63,7 @@ export default {
         'hero-pattern': "url('https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg')",
         'about-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXI8zoIBdbcwULXAp8CNQvM70RaOHEd32FtPTZ')",
         'products-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXn2veXBRzkh2ODjGZ8fabc9T341uVsJQSFUCW')",
+        'contact-pattern': "url('https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXU8YLUhX0guNhrSBAHP1LUo4Y9GfWI8sRnb27')",
       },
     },
   },
