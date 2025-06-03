@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
             We deliver quality aggregates — sand, gravel, cement, hollow blocks, and more.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/contact#contact-form" className="btn-primary">
               Get a Quote
             </Link>
             <a href="tel:+639123456789" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center sm:justify-start">

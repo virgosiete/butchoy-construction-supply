@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
               {link.title}
             </Link>
           ))}
-          <Link to="/contact" className="btn-primary">
+          <Link to="/contact#contact-form" className="btn-primary">
             Get a Quote
           </Link>
         </nav>
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
               </Link>
             ))}
             <Link 
-              to="/contact" 
+              to="/contact#contact-form" 
               className="btn-primary w-full"
               onClick={closeMenu}
             >

@@ -123,7 +123,7 @@ const HomePage: React.FC = () => {
               Get a quote for your construction materials or contact us with any questions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/contact" className="btn-primary">
+              <Link to="/contact#contact-form" className="btn-primary">
                 Contact Us
               </Link>
               <Link to="/products" className="btn bg-white text-charcoal-800 hover:bg-neutral-200">

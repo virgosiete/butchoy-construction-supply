@@ -98,7 +98,7 @@ const ContactPage: React.FC = () => {
             </div>
             
             {/* Contact Form */}
-            <div>
+            <div id="contact-form">
               <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
               <ContactForm />
             </div>

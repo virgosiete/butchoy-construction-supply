@@ -29,7 +29,7 @@ function Hero1() {
               </Link>
             </Button>
             <Button asChild size="lg" className="gap-4 bg-amber-700 hover:bg-amber-800 text-white">
-              <Link to="/contact">
+              <Link to="/contact#contact-form">
                 Get a Free Quote <MoveRight className="w-4 h-4" />
               </Link>
             </Button>

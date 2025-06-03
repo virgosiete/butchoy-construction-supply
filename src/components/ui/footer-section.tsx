@@ -139,7 +139,7 @@ function Footerdemo() {
             <Link to="/terms-of-service" className="text-neutral-300 hover:text-amber-500 transition-colors">
               Terms of Service
             </Link>
-            <Link to="/contact" className="btn-primary text-sm">
+            <Link to="/contact#contact-form" className="btn-primary text-sm">
               Get a Quote
             </Link>
           </div>
