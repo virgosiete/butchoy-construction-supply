@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfX3rvBpugw8fF0Tcu4JDYNRZk2LP6Slpi1eGsQ" 
-                alt="Martina Querubin Logo" 
+                src="/construction-logo.svg" 
+                alt="Butchoy Construction & Supply Logo" 
                 className="h-8 w-auto"
               />
               <h3 className="text-xl font-bold text-white">Butchoy Construction & Supply</h3>

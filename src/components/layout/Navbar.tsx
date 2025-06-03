@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
           <img 
-            src="https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfX3rvBpugw8fF0Tcu4JDYNRZk2LP6Slpi1eGsQ" 
+            src="/construction-logo.svg" 
             alt="Butchoy Construction & Supply Logo" 
             className="h-10 w-auto"
           />

@@ -9,7 +9,7 @@ export const products: Product[] = [
     price: "Contact for pricing",
     minOrder: "1 truck",
     deliveryTime: "Same day to 24 hours",
-    image: "https://images.pexels.com/photos/6312362/pexels-photo-6312362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    image: "https://e8ydux5zsn.ufs.sh/f/M32Ap1J2mMfXWfnJPt6QxCyLAaJU0P9bz67Xdcrf5tmwuTiG"
   },
   {
     id: "three-fourth",
