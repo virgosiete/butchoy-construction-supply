@@ -27,17 +27,17 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Check if Supabase URL is configured
-      if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+      // Check if Supabase client is initialized
+      if (!supabase) {
         throw new Error('Supabase not configured. Please set up your environment variables.');
       }
       
       // Submit the data to Supabase
-      const { error } = await supabase
+      const { error: supabaseError } = await supabase
         .from('inquiries')
         .insert([formData]);
       
-      if (error) throw error;
+      if (supabaseError) throw supabaseError;
       
       // Success
       setIsSubmitted(true);
