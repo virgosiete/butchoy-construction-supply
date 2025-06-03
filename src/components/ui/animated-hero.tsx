@@ -27,9 +27,9 @@ function Hero() {
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
       
       <div className="container mx-auto relative z-10 text-white px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto">
+        <div className="flex gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto pt-20 md:pt-0">
           <div className="flex gap-4 flex-col">
-            <h1 className="text-5xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
+            <h1 className="text-4xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
               <span className="text-white">We deliver</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;

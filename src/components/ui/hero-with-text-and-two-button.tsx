@@ -8,7 +8,7 @@ function Hero1() {
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
       
       <div className="container mx-auto relative z-10 text-white px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto">
+        <div className="flex gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto pt-20 md:pt-0">
           <div>
             <Button variant="secondary" size="sm" className="gap-4 bg-amber-600 hover:bg-amber-700 text-white">
               Premium Construction Materials <MoveRight className="w-4 h-4" />

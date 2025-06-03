@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
       
       <div className="container-custom relative z-10 text-white">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl pt-20 md:pt-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">
             Your Trusted Partner in Construction Supplies
           </h1>

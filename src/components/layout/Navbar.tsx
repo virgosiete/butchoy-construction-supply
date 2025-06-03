@@ -51,10 +51,10 @@ const Navbar: React.FC = () => {
             alt="Butchoy Construction & Supply Logo" 
             className="h-10 w-auto"
           />
-          <span className={`font-bold text-xl ${
+          <span className={`font-bold text-lg md:text-xl ${
             isScrolled || location.pathname !== '/' ? 'text-neutral-900' : 'text-white'
           }`}>
-            Butchoy Construction & Supply
+            Butchoy Construction
           </span>
         </Link>
         

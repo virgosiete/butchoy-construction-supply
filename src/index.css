@@ -169,8 +169,10 @@
 
   /* Hero section responsive sizing */
   .hero-section {
-    @apply relative min-h-[600px] flex items-center bg-cover bg-center;
-    height: 100vh;
+    @apply relative flex items-center bg-cover bg-center;
+    min-height: 100vh; /* Changed from fixed height to min-height */
+    padding-top: 6rem; /* Add top padding to account for navbar */
+    padding-bottom: 2rem;
     max-height: 1080px;
   }
 
