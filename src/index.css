@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 37 92% 50%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-neutral-50 text-neutral-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-neutral-900;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center;
+  }
+  
+  .btn-primary {
+    @apply btn bg-amber-700 text-white hover:bg-amber-800;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-neutral-800 text-white hover:bg-neutral-900;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-amber-700 text-amber-700 hover:bg-amber-700 hover:text-white;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4 text-neutral-900;
+  }
+  
+  .section-subtitle {
+    @apply text-xl text-neutral-600 mb-12 max-w-3xl;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-lg p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-700 focus:border-transparent;
+  }
+
+  /* Aspect ratio utilities */
+  .aspect-mobile {
+    aspect-ratio: 9/16;
+    @apply md:aspect-desktop;
+  }
+
+  .aspect-desktop {
+    aspect-ratio: 16/9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1/1;
+  }
+
+  /* Fallback for browsers that don't support aspect-ratio */
+  @supports not (aspect-ratio: 1/1) {
+    .aspect-ratio-fallback {
+      position: relative;
+      width: 100%;
+    }
+    
+    .aspect-ratio-fallback::before {
+      content: "";
+      display: block;
+    }
+    
+    .mobile-ratio::before {
+      padding-top: 177.78%; /* 16:9 = 9/16 = 0.5625 = 56.25% | 9:16 = 16/9 = 1.7778 = 177.78% */
+    }
+    
+    .desktop-ratio::before {
+      padding-top: 56.25%; /* 16:9 = 9/16 = 0.5625 = 56.25% */
+    }
+    
+    .square-ratio::before {
+      padding-top: 100%; /* 1:1 */
+    }
+    
+    .aspect-ratio-fallback > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  /* Hero section responsive sizing */
+  .hero-section {
+    @apply relative min-h-[600px] flex items-center bg-cover bg-center;
+    height: 100vh;
+    max-height: 1080px;
+  }
+
+  /* Image container styles */
+  .img-container {
+    @apply overflow-hidden relative;
+    width: 100%;
+  }
+
+  .img-container img {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Responsive card grids */
+  .responsive-grid {
+    @apply grid gap-6;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  }
+
+  /* Video container */
+  .video-container {
+    @apply w-full overflow-hidden relative;
+  }
+
+  .video-container video, 
+  .video-container iframe {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Team member photo container */
+  .team-photo-container {
+    @apply w-32 h-32 rounded-full overflow-hidden mb-4;
+  }
+
+  .team-photo-container img {
+    @apply w-full h-full object-cover;
+  }
+
+  /* Testimonial image container */
+  .testimonial-img-container {
+    @apply w-16 h-16 rounded-full overflow-hidden mb-4 mx-auto;
+  }
+  
+  .testimonial-img-container img {
+    @apply w-full h-full object-cover;
+  }
+}

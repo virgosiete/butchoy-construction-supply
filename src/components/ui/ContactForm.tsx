@@ -1,0 +1,156 @@
+import React, { useState } from 'react';
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    location: '',
+    product: '',
+    message: ''
+  });
+  
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // In a real application, you would send this data to your backend
+    console.log(formData);
+    setIsSubmitted(true);
+    
+    // Reset form after submission
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        phone: '',
+        location: '',
+        product: '',
+        message: ''
+      });
+      setIsSubmitted(false);
+    }, 5000);
+  };
+  
+  return (
+    <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+      {isSubmitted ? (
+        <div className="text-center py-8">
+          <div className="bg-green-100 text-green-800 p-4 rounded-md mb-4">
+            Thank you for your inquiry! We'll get back to you shortly.
+          </div>
+          <button 
+            onClick={() => setIsSubmitted(false)}
+            className="btn-primary"
+          >
+            Send Another Inquiry
+          </button>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-neutral-700 mb-1">
+              Full Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="input-field"
+              placeholder="Enter your full name"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-1">
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              className="input-field"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="location" className="block text-sm font-medium text-neutral-700 mb-1">
+              Location (Barangay or City) *
+            </label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              required
+              value={formData.location}
+              onChange={handleChange}
+              className="input-field"
+              placeholder="Enter your location"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="product" className="block text-sm font-medium text-neutral-700 mb-1">
+              Product Interested In *
+            </label>
+            <select
+              id="product"
+              name="product"
+              required
+              value={formData.product}
+              onChange={handleChange}
+              className="input-field"
+            >
+              <option value="">Select a product</option>
+              <option value="s1-washed-sand">S-1 Washed Sand</option>
+              <option value="three-fourth">3/4</option>
+              <option value="base-course">Base Course</option>
+              <option value="premium-base-course">Premium Base Course</option>
+              <option value="vibro">Vibro</option>
+              <option value="double-screen-sand">Double Screen Sand</option>
+              <option value="g1">G-1</option>
+              <option value="hollow-blocks">Hollow Blocks</option>
+              <option value="cement">Cement</option>
+              <option value="boulders">Boulders</option>
+            </select>
+          </div>
+          
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-neutral-700 mb-1">
+              Additional Notes
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              value={formData.message}
+              onChange={handleChange}
+              className="input-field"
+              placeholder="Enter any specific requirements or questions"
+            ></textarea>
+          </div>
+          
+          <button type="submit" className="btn-primary w-full">
+            Submit Inquiry
+          </button>
+          
+          <p className="text-sm text-neutral-500 mt-2">
+            * Required fields
+          </p>
+        </form>
+      )}
+    </div>
+  );
+};
+
+export default ContactForm;
