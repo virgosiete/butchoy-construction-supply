@@ -13,8 +13,8 @@ const ProductsPage: React.FC = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 bg-neutral-800 aspect-mobile md:aspect-desktop">
-        <div className="absolute inset-0 bg-charcoal-900 bg-opacity-80"></div>
+      <section className="relative py-24 md:py-32 bg-products-pattern bg-cover bg-center aspect-mobile md:aspect-desktop">
+        <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
         <div className="container-custom relative z-10 text-white flex items-center h-full">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Our Products</h1>
