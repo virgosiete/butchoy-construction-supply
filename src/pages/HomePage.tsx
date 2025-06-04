@@ -84,8 +84,8 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="border border-amber-600 p-4">
-                <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">CALABARZON (Region IV-A)</h3>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">CALABARZON (Region IV-A)</h3>
                 <div className="mt-3">
                   <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Cavite</li>
@@ -97,8 +97,8 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               
-              <div className="border border-amber-600 p-4">
-                <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">MIMAROPA (Region IV-B)</h3>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">MIMAROPA (Region IV-B)</h3>
                 <div className="mt-3">
                   <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Occidental Mindoro</li>
@@ -110,8 +110,8 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
               
-              <div className="border border-amber-600 p-4">
-                <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">Bicol Region (Region V)</h3>
+              <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
+                <h3 className="text-xl font-semibold mb-3">Bicol Region (Region V)</h3>
                 <div className="mt-3">
                   <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Albay</li>
@@ -125,7 +125,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-6 text-amber-100 text-sm italic border-t border-amber-600 pt-4 max-w-3xl mx-auto">
+            <div className="mt-6 text-amber-100 text-sm italic">
               This is an informational display of our service areas. For delivery inquiries, please contact us.
             </div>
             

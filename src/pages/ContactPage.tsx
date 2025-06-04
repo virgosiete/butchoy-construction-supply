@@ -120,7 +120,7 @@ const ContactPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="mt-6 text-neutral-500 text-sm italic border-t border-neutral-200 pt-4">
+                <div className="mt-6 text-neutral-500 text-sm italic">
                   This is an informational display of our service areas. For delivery inquiries, please contact us.
                 </div>
                 
