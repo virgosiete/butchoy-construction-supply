@@ -170,10 +170,13 @@
   /* Hero section responsive sizing */
   .hero-section {
     @apply relative flex items-center bg-cover bg-center;
-    min-height: 100vh; /* Changed from fixed height to min-height */
-    padding-top: 6rem; /* Add top padding to account for navbar */
-    padding-bottom: 2rem;
+    height: 100vh;
+    min-height: 600px;
     max-height: 1080px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem; /* Account for navbar */
   }
 
   /* Image container styles */

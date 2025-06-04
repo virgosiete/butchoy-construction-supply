@@ -26,10 +26,10 @@ function Hero() {
     <section className="hero-section bg-hero-pattern">
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
       
-      <div className="container mx-auto relative z-10 text-white px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto pt-20 md:pt-0">
-          <div className="flex gap-4 flex-col">
-            <h1 className="text-4xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
+      <div className="container mx-auto relative z-10 text-white px-4 sm:px-6 lg:px-8 h-full flex items-center">
+        <div className="flex gap-6 md:gap-8 py-16 lg:py-0 items-center justify-center flex-col max-w-4xl mx-auto w-full">
+          <div className="flex gap-3 md:gap-4 flex-col">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
               <span className="text-white">We deliver</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
@@ -55,15 +55,15 @@ function Hero() {
                   </motion.span>
                 ))}
               </span>
-              <span className="text-white block">construction supplies</span>
+              <span className="text-white block mt-4 md:mt-0">construction supplies</span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-neutral-200 max-w-2xl text-center mx-auto mt-4">
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-neutral-200 max-w-2xl text-center mx-auto mt-2 md:mt-4">
               From foundation to finish, we provide everything you need for your construction projects. 
               Sand, gravel, cement, hollow blocks and more — delivered on time, every time.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 mt-6">
+          <div className="flex flex-col sm:flex-row gap-3 mt-2 sm:mt-6 w-full sm:w-auto justify-center">
             <Button asChild size="lg" className="gap-4 bg-amber-700 hover:bg-amber-800 text-white">
               <Link to="/contact#contact-form">
                 Get a Free Quote <MoveRight className="w-4 h-4" />
