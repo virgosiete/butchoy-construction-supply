@@ -85,9 +85,9 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
-                <h3 className="text-xl font-semibold mb-3">CALABARZON (Region IV-A)</h3>
-                <div className="mt-3">
-                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
+                <h3 className="text-xl font-semibold mb-3 text-center">CALABARZON (Region IV-A)</h3>
+                <div className="mt-2">
+                  <ul className="list-disc pl-8 text-left space-y-1">
                     <li>Cavite</li>
                     <li>Laguna</li>
                     <li>Batangas</li>
@@ -98,9 +98,9 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
-                <h3 className="text-xl font-semibold mb-3">MIMAROPA (Region IV-B)</h3>
-                <div className="mt-3">
-                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
+                <h3 className="text-xl font-semibold mb-3 text-center">MIMAROPA (Region IV-B)</h3>
+                <div className="mt-2">
+                  <ul className="list-disc pl-8 text-left space-y-1">
                     <li>Occidental Mindoro</li>
                     <li>Oriental Mindoro</li>
                     <li>Marinduque</li>
@@ -111,9 +111,9 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="bg-amber-800 bg-opacity-50 rounded-lg p-4">
-                <h3 className="text-xl font-semibold mb-3">Bicol Region (Region V)</h3>
-                <div className="mt-3">
-                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
+                <h3 className="text-xl font-semibold mb-3 text-center">Bicol Region (Region V)</h3>
+                <div className="mt-2">
+                  <ul className="list-disc pl-8 text-left space-y-1">
                     <li>Albay</li>
                     <li>Camarines Norte</li>
                     <li>Camarines Sur</li>
