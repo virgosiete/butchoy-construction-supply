@@ -87,7 +87,7 @@ const ContactPage: React.FC = () => {
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">CALABARZON (Region IV-A)</h4>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                    <ul className="flex flex-wrap gap-x-8 gap-y-2 list-disc pl-5">
                       <li>Cavite</li>
                       <li>Laguna</li>
                       <li>Batangas</li>
@@ -98,7 +98,7 @@ const ContactPage: React.FC = () => {
                   
                   <div>
                     <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">MIMAROPA (Region IV-B)</h4>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                    <ul className="flex flex-wrap gap-x-8 gap-y-2 list-disc pl-5">
                       <li>Occidental Mindoro</li>
                       <li>Oriental Mindoro</li>
                       <li>Marinduque</li>
@@ -109,7 +109,7 @@ const ContactPage: React.FC = () => {
                   
                   <div>
                     <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">Bicol Region (Region V)</h4>
-                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                    <ul className="flex flex-wrap gap-x-8 gap-y-2 list-disc pl-5">
                       <li>Albay</li>
                       <li>Camarines Norte</li>
                       <li>Camarines Sur</li>

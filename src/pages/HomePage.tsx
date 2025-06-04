@@ -87,12 +87,12 @@ const HomePage: React.FC = () => {
               <div className="border border-amber-600 p-4">
                 <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">CALABARZON (Region IV-A)</h3>
                 <div className="mt-3">
-                  <ul className="grid grid-cols-2 gap-y-2 list-disc pl-5">
+                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Cavite</li>
                     <li>Laguna</li>
                     <li>Batangas</li>
                     <li>Rizal</li>
-                    <li className="col-span-2">Quezon</li>
+                    <li>Quezon</li>
                   </ul>
                 </div>
               </div>
@@ -100,12 +100,12 @@ const HomePage: React.FC = () => {
               <div className="border border-amber-600 p-4">
                 <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">MIMAROPA (Region IV-B)</h3>
                 <div className="mt-3">
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2 list-disc pl-5">
+                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Occidental Mindoro</li>
                     <li>Oriental Mindoro</li>
                     <li>Marinduque</li>
                     <li>Romblon</li>
-                    <li className="col-span-1 sm:col-span-2">Palawan</li>
+                    <li>Palawan</li>
                   </ul>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const HomePage: React.FC = () => {
               <div className="border border-amber-600 p-4">
                 <h3 className="text-xl font-semibold mb-3 border-b border-amber-600 pb-2">Bicol Region (Region V)</h3>
                 <div className="mt-3">
-                  <ul className="grid grid-cols-2 gap-y-2 list-disc pl-5">
+                  <ul className="flex flex-wrap justify-center gap-x-8 gap-y-2 list-disc pl-5 text-left">
                     <li>Albay</li>
                     <li>Camarines Norte</li>
                     <li>Camarines Sur</li>
@@ -125,7 +125,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-6 text-amber-100 text-sm italic border-t border-amber-600 pt-4">
+            <div className="mt-6 text-amber-100 text-sm italic border-t border-amber-600 pt-4 max-w-3xl mx-auto">
               This is an informational display of our service areas. For delivery inquiries, please contact us.
             </div>
             
