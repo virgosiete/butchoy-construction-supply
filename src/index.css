@@ -170,13 +170,15 @@
   /* Hero section responsive sizing */
   .hero-section {
     @apply relative flex items-center bg-cover bg-center;
-    height: 100vh;
+    height: 100svh; /* Using svh for better mobile viewport handling */
     min-height: 600px;
     max-height: 1080px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 4rem; /* Account for navbar */
+    padding: 0; /* Remove padding */
+    padding-top: calc(4rem + env(safe-area-inset-top, 0)); /* Account for navbar and safe area */
+    padding-bottom: env(safe-area-inset-bottom, 0); /* Account for bottom safe area */
   }
 
   /* Image container styles */

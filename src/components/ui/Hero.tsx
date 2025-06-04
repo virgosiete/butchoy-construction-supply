@@ -7,19 +7,19 @@ const Hero: React.FC = () => {
     <section className="hero-section bg-hero-pattern">
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
       
-      <div className="container-custom relative z-10 text-white">
-        <div className="max-w-3xl pt-20 md:pt-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight">
+      <div className="container-custom relative z-10 text-white flex items-center justify-center h-full">
+        <div className="max-w-3xl flex flex-col items-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight text-center">
             Your Trusted Partner in Construction Supplies
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-neutral-200">
+          <p className="text-lg sm:text-xl md:text-2xl mb-6 text-neutral-200 text-center">
             We deliver quality aggregates — sand, gravel, cement, hollow blocks, and more.
           </p>
-          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto justify-center">
             <Link to="/contact#contact-form" className="btn-primary">
               Get a Quote
             </Link>
-            <a href="tel:+639123456789" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center sm:justify-start">
+            <a href="tel:+639123456789" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center">
               <Phone size={18} className="mr-2" />
               Call Us Now
             </a>
