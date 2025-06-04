@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="mt-8">
-              <Link to="/contact" className="btn bg-white text-amber-700 hover:bg-neutral-100">
+              <Link to="/contact#contact-form" className="btn bg-white text-amber-700 hover:bg-neutral-100">
                 Inquire About Delivery
               </Link>
             </div>

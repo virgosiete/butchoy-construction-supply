@@ -58,7 +58,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) 
         )}
         
         <Link 
-          to="/contact"
+          to="/contact#contact-form"
           className={`text-amber-700 font-medium flex items-center ${featured ? 'mt-auto' : ''} group-hover:text-amber-800`}
         >
           Request a Quote

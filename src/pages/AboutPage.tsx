@@ -168,7 +168,7 @@ const AboutPage: React.FC = () => {
             <p className="text-xl mb-8">
               Contact us today to discuss your construction material needs and get a quote.
             </p>
-            <Link to="/contact" className="btn bg-white text-amber-700 hover:bg-neutral-100">
+            <Link to="/contact#contact-form" className="btn bg-white text-amber-700 hover:bg-neutral-100">
               Contact Us Now
             </Link>
           </div>
