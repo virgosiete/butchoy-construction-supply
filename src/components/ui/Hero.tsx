@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
             <Link to="/contact#contact-form" className="btn-primary">
               Get a Quote
             </Link>
-            <a href="tel:+639123456789" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center">
+            <a href="tel:+63 936 940 9945" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center">
               <Phone size={18} className="mr-2" />
               Call Us Now
             </a>

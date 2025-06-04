@@ -24,7 +24,7 @@ function Hero1() {
           </div>
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
             <Button asChild size="lg" className="gap-4 bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900">
-              <Link to="tel:+639123456789">
+              <Link to="tel:+639369409945">
                 <PhoneCall className="w-4 h-4 mr-2" /> Call Us Now
               </Link>
             </Button>

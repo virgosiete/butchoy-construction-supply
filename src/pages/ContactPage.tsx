@@ -36,7 +36,7 @@ const ContactPage: React.FC = () => {
                     <Phone size={24} className="text-amber-700 mr-4 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <p className="text-neutral-600">+63 912 345 6789</p>
+                      <p className="text-neutral-600">+63 936 940 9945</p>
                     </div>
                   </li>
                   <li className="flex items-start">
