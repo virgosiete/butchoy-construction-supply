@@ -86,43 +86,53 @@ const ContactPage: React.FC = () => {
                 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-medium mb-2 text-amber-700">CALABARZON (Region IV-A)</h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Cavite</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Laguna</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Batangas</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Rizal</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Quezon</div>
-                    </div>
+                    <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">CALABARZON (Region IV-A)</h4>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                      <li>Cavite</li>
+                      <li>Laguna</li>
+                      <li>Batangas</li>
+                      <li>Rizal</li>
+                      <li>Quezon</li>
+                    </ul>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium mb-2 text-amber-700">MIMAROPA (Region IV-B)</h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Occidental Mindoro</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Oriental Mindoro</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Marinduque</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Romblon</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Palawan</div>
-                    </div>
+                    <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">MIMAROPA (Region IV-B)</h4>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                      <li>Occidental Mindoro</li>
+                      <li>Oriental Mindoro</li>
+                      <li>Marinduque</li>
+                      <li>Romblon</li>
+                      <li>Palawan</li>
+                    </ul>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium mb-2 text-amber-700">Bicol Region (Region V)</h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Albay</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Camarines Norte</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Camarines Sur</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Catanduanes</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Masbate</div>
-                      <div className="bg-neutral-100 rounded p-2 text-center text-sm">Sorsogon</div>
-                    </div>
+                    <h4 className="font-medium mb-2 text-amber-700 border-b border-amber-200 pb-2">Bicol Region (Region V)</h4>
+                    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2 list-disc pl-5">
+                      <li>Albay</li>
+                      <li>Camarines Norte</li>
+                      <li>Camarines Sur</li>
+                      <li>Catanduanes</li>
+                      <li>Masbate</li>
+                      <li>Sorsogon</li>
+                    </ul>
                   </div>
                 </div>
                 
-                <p className="text-neutral-600 mt-6">
+                <div className="mt-6 text-neutral-500 text-sm italic border-t border-neutral-200 pt-4">
+                  This is an informational display of our service areas. For delivery inquiries, please contact us.
+                </div>
+                
+                <p className="text-neutral-600 mt-4">
                   For specific location inquiries or other areas beyond these regions, please contact us for availability and delivery rates.
                 </p>
+                
+                <div className="mt-6">
+                  <a href="#contact-form" className="btn-primary inline-block text-center">
+                    Inquire About Delivery
+                  </a>
+                </div>
               </div>
             </div>
             
