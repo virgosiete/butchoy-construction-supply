@@ -14,9 +14,11 @@ import {
 } from "@/components/ui/tooltip"
 import { Facebook, Instagram, Linkedin, Moon, Phone, Mail, MapPin, Clock, Send, Sun, Twitter } from "lucide-react"
 import { Link } from "react-router-dom"
+import { useModal } from "../../context/ModalContext"
 
 function Footerdemo() {
   const [isDarkMode, setIsDarkMode] = React.useState(false)
+  const { openContactModal } = useModal();
 
   React.useEffect(() => {
     if (isDarkMode) {
@@ -139,9 +141,12 @@ function Footerdemo() {
             <Link to="/terms-of-service" className="text-neutral-300 hover:text-amber-500 transition-colors">
               Terms of Service
             </Link>
-            <Link to="/contact#contact-form" className="btn-primary text-sm">
+            <button 
+              onClick={openContactModal} 
+              className="btn-primary text-sm"
+            >
               Get a Quote
-            </Link>
+            </button>
           </div>
         </div>
       </div>

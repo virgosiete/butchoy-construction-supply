@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Phone } from 'lucide-react';
+import { useModal } from '../../context/ModalContext';
 
 const Hero: React.FC = () => {
+  const { openContactModal } = useModal();
+  
   return (
     <section className="hero-section bg-hero-pattern">
       <div className="absolute inset-0 bg-charcoal-900 bg-opacity-70"></div>
@@ -16,9 +18,12 @@ const Hero: React.FC = () => {
             We deliver quality aggregates — sand, gravel, cement, hollow blocks, and more.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto justify-center">
-            <Link to="/contact#contact-form" className="btn-primary">
+            <button 
+              onClick={openContactModal}
+              className="btn-primary"
+            >
               Get a Quote
-            </Link>
+            </button>
             <a href="tel:+63 936 940 9945" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center">
               <Phone size={18} className="mr-2" />
               Call Us Now

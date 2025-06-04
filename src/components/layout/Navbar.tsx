@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import { useModal } from '../../context/ModalContext';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { openContactModal } = useModal();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +28,12 @@ const Navbar: React.FC = () => {
   
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+  
+  const handleQuoteButtonClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    closeMenu();
+    openContactModal();
   };
   
   const navLinks = [
@@ -73,9 +81,12 @@ const Navbar: React.FC = () => {
               {link.title}
             </Link>
           ))}
-          <Link to="/contact#contact-form" className="btn-primary">
+          <button 
+            onClick={handleQuoteButtonClick}
+            className="btn-primary"
+          >
             Get a Quote
-          </Link>
+          </button>
         </nav>
         
         {/* Mobile Menu Button */}
@@ -108,13 +119,12 @@ const Navbar: React.FC = () => {
                 {link.title}
               </Link>
             ))}
-            <Link 
-              to="/contact#contact-form" 
+            <button 
+              onClick={handleQuoteButtonClick}
               className="btn-primary w-full"
-              onClick={closeMenu}
             >
               Get a Quote
-            </Link>
+            </button>
           </div>
         </div>
       )}

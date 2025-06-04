@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useModal } from "../../context/ModalContext";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
+  const { openContactModal } = useModal();
   const titles = useMemo(
     () => ["premium", "reliable", "durable", "quality", "trusted"],
     []
@@ -64,10 +66,12 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-6 w-full sm:w-auto justify-center">
-            <Button asChild size="lg" className="gap-4 bg-amber-700 hover:bg-amber-800 text-white">
-              <Link to="/contact#contact-form">
-                Get a Free Quote <MoveRight className="w-4 h-4" />
-              </Link>
+            <Button 
+              size="lg" 
+              className="gap-4 bg-amber-700 hover:bg-amber-800 text-white"
+              onClick={openContactModal}
+            >
+              Get a Free Quote <MoveRight className="w-4 h-4" />
             </Button>
           </div>
         </div>

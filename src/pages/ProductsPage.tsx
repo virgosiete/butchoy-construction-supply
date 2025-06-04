@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from '../components/ui/ProductCard';
 import { products } from '../data/products';
+import { useModal } from '../context/ModalContext';
 
 const ProductsPage: React.FC = () => {
   const [filter, setFilter] = useState<string | null>(null);
+  const { openContactModal } = useModal();
   
   const filteredProducts = filter 
     ? products.filter(product => product.id === filter)
@@ -86,9 +88,12 @@ const ProductsPage: React.FC = () => {
               <p className="text-neutral-600 mb-6">
                 We can source custom materials for your specific project needs. Contact us with your requirements and we'll provide a quote.
               </p>
-              <Link to="/contact" className="btn-primary">
+              <button 
+                onClick={openContactModal}
+                className="btn-primary"
+              >
                 Request Custom Order
-              </Link>
+              </button>
             </div>
           </div>
         </div>

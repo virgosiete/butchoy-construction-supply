@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as LucideIcons from 'lucide-react';
 import { Product } from '../../types';
+import { useModal } from '../../context/ModalContext';
 
 interface ProductCardProps {
   product: Product;
@@ -11,6 +12,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) => {
   // Dynamically get the icon from Lucide
   const IconComponent = LucideIcons[product.icon as keyof typeof LucideIcons] || LucideIcons.Package;
+  const { openContactModal } = useModal();
   
   return (
     <div className={`card group ${featured ? 'h-full' : ''}`}>
@@ -57,13 +59,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, featured = false }) 
           </div>
         )}
         
-        <Link 
-          to="/contact#contact-form"
+        <button
+          onClick={openContactModal}
           className={`text-amber-700 font-medium flex items-center ${featured ? 'mt-auto' : ''} group-hover:text-amber-800`}
         >
           Request a Quote
           <LucideIcons.ArrowRight size={16} className="ml-1 transition-transform group-hover:translate-x-1" />
-        </Link>
+        </button>
       </div>
     </div>
   );

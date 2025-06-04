@@ -6,10 +6,12 @@ import ProductCard from '../components/ui/ProductCard';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import { products } from '../data/products';
 import { testimonials } from '../data/testimonials';
+import { useModal } from '../context/ModalContext';
 
 const HomePage: React.FC = () => {
   // Get the first 3 products for featured section
   const featuredProducts = products.slice(0, 3);
+  const { openContactModal } = useModal();
   
   return (
     <>
@@ -134,9 +136,12 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="mt-8">
-              <Link to="/contact#contact-form" className="btn bg-white text-amber-700 hover:bg-neutral-100">
+              <button 
+                onClick={openContactModal}
+                className="btn bg-white text-amber-700 hover:bg-neutral-100"
+              >
                 Inquire About Delivery
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -169,9 +174,12 @@ const HomePage: React.FC = () => {
               Get a quote for your construction materials or contact us with any questions.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/contact#contact-form" className="btn-primary">
+              <button 
+                onClick={openContactModal}
+                className="btn-primary"
+              >
                 Contact Us
-              </Link>
+              </button>
               <Link to="/products" className="btn bg-white text-charcoal-800 hover:bg-neutral-200">
                 View Products
               </Link>

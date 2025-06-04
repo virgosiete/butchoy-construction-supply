@@ -1,8 +1,11 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Facebook } from 'lucide-react';
 import ContactForm from '../components/ui/ContactForm';
+import { useModal } from '../context/ModalContext';
 
 const ContactPage: React.FC = () => {
+  const { openContactModal } = useModal();
+  
   return (
     <>
       {/* Hero Section */}
@@ -129,9 +132,12 @@ const ContactPage: React.FC = () => {
                 </p>
                 
                 <div className="mt-6">
-                  <a href="#contact-form" className="btn-primary inline-block text-center">
+                  <button
+                    onClick={openContactModal}
+                    className="btn-primary inline-block text-center"
+                  >
                     Inquire About Delivery
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>

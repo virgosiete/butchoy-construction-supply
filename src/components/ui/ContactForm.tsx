@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { supabase, type Inquiry } from '../../lib/supabase';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  onSuccess?: () => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   const [formData, setFormData] = useState<Inquiry>({
     name: '',
     phone: '',
@@ -64,6 +68,13 @@ const ContactForm: React.FC = () => {
       // Success
       setIsSubmitted(true);
       
+      // Call onSuccess callback if provided
+      if (onSuccess) {
+        setTimeout(() => {
+          onSuccess();
+        }, 3000);
+      }
+      
       // Reset form after submission
       setTimeout(() => {
         setFormData({
@@ -85,7 +96,7 @@ const ContactForm: React.FC = () => {
   };
   
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+    <div className="bg-white rounded-lg p-0">
       {isSubmitted ? (
         <div className="text-center py-8">
           <div className="bg-green-100 text-green-800 p-4 rounded-md mb-4">

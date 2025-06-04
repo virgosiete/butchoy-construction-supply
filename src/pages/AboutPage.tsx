@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { TruckIcon, UsersIcon, HandshakeIcon, ShieldCheckIcon } from 'lucide-react';
+import { useModal } from '../context/ModalContext';
 
 const AboutPage: React.FC = () => {
+  const { openContactModal } = useModal();
+  
   return (
     <>
       {/* Hero Section */}
@@ -168,9 +171,12 @@ const AboutPage: React.FC = () => {
             <p className="text-xl mb-8">
               Contact us today to discuss your construction material needs and get a quote.
             </p>
-            <Link to="/contact#contact-form" className="btn bg-white text-amber-700 hover:bg-neutral-100">
+            <button
+              onClick={openContactModal}
+              className="btn bg-white text-amber-700 hover:bg-neutral-100"
+            >
               Contact Us Now
-            </Link>
+            </button>
           </div>
         </div>
       </section>
