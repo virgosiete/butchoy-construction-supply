@@ -31,7 +31,7 @@ function Hero() {
       <div className="container mx-auto relative z-10 text-white px-4 sm:px-6 lg:px-8 flex items-center justify-center h-full">
         <div className="flex gap-5 sm:gap-6 md:gap-8 items-center justify-center flex-col max-w-4xl w-full">
           <div className="flex gap-3 md:gap-4 flex-col">
-            <h1 className="text-3xl sm:text-4xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl max-w-3xl tracking-tighter text-center font-bold">
               <span className="text-white">We deliver</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
@@ -60,7 +60,7 @@ function Hero() {
               <span className="text-white block mt-2 md:mt-0">construction supplies</span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed tracking-tight text-neutral-200 max-w-2xl text-center mx-auto mt-3 md:mt-4">
+            <p className="text-lg sm:text-xl md:text-2xl leading-relaxed tracking-tight text-neutral-200 max-w-2xl text-center mx-auto mt-3 md:mt-4">
               From foundation to finish, we provide everything you need for your construction projects. 
               Sand, gravel, cement, hollow blocks and more — delivered on time, every time.
             </p>
@@ -68,7 +68,7 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 mt-4 sm:mt-6 w-full sm:w-auto justify-center">
             <Button 
               size="lg" 
-              className="gap-4 bg-amber-700 hover:bg-amber-800 text-white"
+              className="gap-4 bg-amber-700 hover:bg-amber-800 text-white text-base sm:text-lg"
               onClick={openContactModal}
             >
               Get a Free Quote <MoveRight className="w-4 h-4" />

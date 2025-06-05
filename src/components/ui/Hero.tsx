@@ -11,20 +11,20 @@ const Hero: React.FC = () => {
       
       <div className="container-custom relative z-10 text-white flex items-center justify-center h-full">
         <div className="max-w-3xl flex flex-col items-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white leading-tight text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight text-center">
             Your Trusted Partner in Construction Supplies
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-6 text-neutral-200 text-center">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl mb-6 text-neutral-200 text-center">
             We deliver quality aggregates — sand, gravel, cement, hollow blocks, and more.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 w-full sm:w-auto justify-center">
             <button 
               onClick={openContactModal}
-              className="btn-primary"
+              className="btn-primary text-base sm:text-lg"
             >
               Get a Quote
             </button>
-            <a href="tel:+63 936 940 9945" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center">
+            <a href="tel:+63 936 940 9945" className="btn-outline bg-transparent border-white text-white hover:bg-white hover:text-charcoal-900 flex items-center justify-center text-base sm:text-lg">
               <Phone size={18} className="mr-2" />
               Call Us Now
             </a>
