@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled || location.pathname !== '/' 
+        isScrolled 
           ? 'bg-white shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
             className="h-10 w-auto"
           />
           <span className={`font-bold text-lg md:text-xl ${
-            isScrolled || location.pathname !== '/' ? 'text-neutral-900' : 'text-white'
+            isScrolled ? 'text-neutral-900' : 'text-white'
           }`}>
             Butchoy Construction & Supply
           </span>
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
               className={`font-medium transition-colors duration-300 ${
                 location.pathname === link.path 
                   ? 'text-amber-700' 
-                  : (isScrolled || location.pathname !== '/' ? 'text-neutral-800 hover:text-amber-700' : 'text-white hover:text-amber-200')
+                  : (isScrolled ? 'text-neutral-800 hover:text-amber-700' : 'text-white hover:text-amber-200')
               }`}
             >
               {link.title}
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} className={
-            isScrolled || location.pathname !== '/' ? 'text-neutral-800' : 'text-white'
+            isScrolled ? 'text-neutral-800' : 'text-white'
           } />}
         </button>
       </div>
