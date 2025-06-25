@@ -47,7 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
       }
       
       // Also send the data to Make.com webhook
-      const webhookUrl = 'https://hook.us1.make.com/oni5yts3e9zxxmxpqtgs9swfts4k98qd';
+      const webhookUrl = 'https://hook.us2.make.com/j3gpuboiw1ue1b8w5v2xaemip700rhwc';
       
       const makeResponse = await fetch(webhookUrl, {
         method: 'POST',
